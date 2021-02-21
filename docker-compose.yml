@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mongodb-service:
+    image: "mongo"
+    ports:
+      - 27017:27017
+
+  api-service1:
+    build: 
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - 2021:2021
+    container_name: api1
