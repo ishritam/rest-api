@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "f9b138b8-5bc1-4299-992e-711b179476fa",
+		"name": "filed_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload_song",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"audio_file_type\" : \"Song\",\r\n    \"audio_file_metadata\" : {\r\n        \"id\" : 102,\r\n        \"name\" : \"hksd\",\r\n        \"duration\": 10,\r\n        \"upload_time\" : \"2022-03-29T13:34:00.000\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2021/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2021",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload_podcast",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"audio_file_type\" : \"Podcast\",\r\n    \"audio_file_metadata\" : {\r\n        \"id\" : 5,\r\n        \"name\" : \"hksd\",\r\n        \"duration\": 10,\r\n        \"upload_time\" : \"2022-03-29T13:34:00.000\",\r\n        \"host\" : \"aaa\",\r\n        \"participants\" : [\"a\",\"b\",\"c\",\"a\",\"b\",\"c\",\"a\"]\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2021/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2021",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload_audiobook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"audio_file_type\" : \"Audiobook\",\r\n    \"audio_file_metadata\" : {\r\n        \"id\" : 85,\r\n        \"title\" : \"hksd\",\r\n        \"duration\": 10,\r\n        \"upload_time\" : \"2022-03-29T13:34:00.000\",\r\n        \"author\" : \"aaa\",\r\n        \"narrator\" : \"ssxxx\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2021/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2021",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2021/delete/Song/55",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2021",
+					"path": [
+						"delete",
+						"Song",
+						"55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\" : 55,\r\n        \"name\" : \"hksd\",\r\n        \"duration\": 10,\r\n        \"upload_time\" : \"2022-03-29T13:34:00.000\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:2021/update/Song/56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2021",
+					"path": [
+						"update",
+						"Song",
+						"56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2021/get/Song",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2021",
+					"path": [
+						"get",
+						"Song"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
